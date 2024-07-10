@@ -1,0 +1,69 @@
+ {
+    "welcome": "¡Bienvenido a nuestra aplicación!",
+    "home": "Inicio",
+    "settings": "Ajustes",
+
+
+    "p1-title": "ሙስናን አጋልጡ",
+    "p1-description":"ሙስናን ከተመላከታቹ አጋልጡ ፣ የናንተን ትብብር እንፈልጋለን",
+
+    "p2-title": "ማንነታችሁን መመዝገብ አያስፈልግም",
+    "p2-description":"የናንተን መረጃ ሚስጥራዊነቱን እንጠብቃለን",
+
+    "s1-title": "ድርጊቱ የተከናወነበት ቀን አና ቦታ",
+    "s1-description": "ድርጊቱ የተከናወነበትን ቀን  አና ቦታ (ዋና መስሪያ ቤት ወይም ክልል ፣ ዲስትሪክት አና መአከል) ያስገቡ ",
+    "date": "ድርጊቱ የተከናወነበትን ቀን",
+    "Location": "ድርጊቱ የተከናወነበትን ቦታ",
+    "region": "ዋና መስሪያ ቤት ወይም ክልል",
+    "district": "ዲስትሪክት",
+    "csc": "አገልግሎት መስጫ መአከል",
+    "Select_Date":"ድርጊቱ የተከናወነበትን ቀን ይምረጡ",
+    "Select_Region":"ክልል ይምረጡ",
+    "Select_District": "ዲስትሪክት ይምረጡ",
+    "Select_CSC": "አገልግሎት መስጫ መአከል ይምረጡ",
+    "Select": "ምረጥ",
+    "Selected": "የተመረጠው",
+
+    "s2-title": "ሙስና ጠያቂው ወይም ተቀባዩ",
+    "s2-description": "ሙስና ጠያቂው ወይም ተቀባዩ ፣ ስነምግባር ብልሹ የሆነውን ሰው ስም ፣ የስራ ሁኔታ ሥልጣን ቦታ ፣ ስልክ ያስገቡ",
+    "Name": "ስም",
+    "position": "የስራ ሁኔታ (ሥልጣን ፣ ቦታ)",
+    "Phone": "ስልክ ቁጥር",
+    "Name_placeHolder": "e.g. አበበ ከበደ",
+    "position_placeHolder": "e.g. ማናጀር",
+    "Phone_placeHolder": "e.g. 0934 567 890",
+
+    "s3-title": "ርዕሰ ጉዳይ እና አካል",
+    "s3-description": "ርዕሰ ጉዳዩን እና አካሉን ይፃፉ",
+    "subject": "ርዕሰ ጉዳይ",
+    "body": "የጥቆማው ዋና ጭብጥ ይግለጽፁ",
+    "write_title": "",
+    "write_body": "",
+
+    "goBack": "ተመለስ",
+    "nextStep": "ቀጣይ",
+    "confirm": "ላክ",
+
+    "s4-title": "ግላዊ መረጃ",
+    "s4-description": "ግላዊ መረጃ መሙላት የምትፈልጉ ብቻ ከሆነ ይሙሉ ፣ ካልሆነ ይለፉት",
+    "email": "ኢሜይል",
+    "address": "አድራሻ",
+    "Adress_placeHolder": "አድራሻ",
+
+    "s5-title": "ማጠቃለያ",
+    "s5-description": "የሞሉት መረጃ ትክክል መሆኑን በድጋሚ ያረጋግጡ",
+    "Incident_Date": "ድርጊቱ የተከናወነበትን ቀን :",
+    "Incident_location": "ድርጊቱ የተከናወነበትን ቦታ :",
+    "attachments":"አባሪዎች",
+    "Attach File": "አባሪዎች",
+
+    "s6-title": "እናመስግናለን",
+    "s6-description": "ለሰጣችሁን መረጃ እናመስግናለን! መረጃውን በመጠቀም ተገቢውን ምርመራ አና እርምጃ እንውስዳለን  ተጨማሪ መረጃ ወይም እስተያየት ካሎት በስልክ 905 , በኢሜል info@ethiopianelectricutility.gov.et  ያገኙናል።",
+
+    "To which EEU (Region, District, CSC) to inform your suggestion (optional)": "የትኛውን ተቋም ጥቆማዎን ማሳወቅ ይፈልጋሉ",
+    "Select (Region, District, CSC)": "ይምረጡ (ክልል, ዲስትሪክት, መአከል)",
+    "To which EEU to inform your suggestion": "የትኛውን ተቋም ጥቆማዎን ማሳወቅ ይፈልጋሉ",
+    "Add New Case": "ተጨማሪ ለማመልከት",
+    "maximum": "ከፍተኛ"
+  }
+

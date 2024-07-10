@@ -1,0 +1,71 @@
+{
+    "welcome": "Welcome to our App!",
+    "home": "Home",
+    "settings": "Settings",
+
+    "p1-title": "Report a Corruption",
+    "p1-description": "If you suspect corruption, report it.  Your information is crucial.",
+
+    "p2-title":  "No sign-up required.",
+    "p2-description": "We keep your information confidential.",
+
+    "s1-title": "Incident happened Date & location info",
+    "s1-description": "Please provide incident happend Date, location Headoffice/Region, District, and CSC.",
+    "date": "Incident happend Date",
+    "Location": "Incident happend Location",
+    "region": "Headoffice/Region",
+    "district": "District",
+    "csc": "Customer Service Center",
+    "Select_Date":"Incident happend Date",
+    "Select_Region":"Select Region",
+    "Select_District": "Select District",
+    "Select_CSC": "Select_CSC",
+    "Select": "Select",
+    "Selected": "Selected",
+
+
+    "s2-title": "Suspicious Person info",
+    "s2-description": "Please provide the Suspicious Person name, Office status (position) , and phone number.",
+    "Name": "Name",
+    "position": "Office status (position)",
+    "Phone": "Phone Number",
+    "Name_placeHolder": "e.g. Abebe Kebede",
+    "position_placeHolder": "Position",
+    "Phone_placeHolder": "e.g. 0934 567 890",
+
+
+    "s3-title": "Suspicious person Info and Discripition",
+    "s3-description": "Please provide the Suspicious Person name, Office status (position) , and phone number and Discripition",
+    "subject": "Subject",
+    "body": "Details of your Report",
+    "write_title": "Write a Title",
+    "write_body": "Write a Details of your Report",
+
+    "goBack": "Go Back",
+    "nextStep": "Next Step",
+    "confirm": "Confirm",
+
+    "s4-title": "Personal info",
+    "s4-description": "provide your name, email address, and phone number, but it's optional to proceed without providing your information.",
+    "email": "Email Address",
+    "address": "Address",
+    "Adress_placeHolder": "address",
+
+    "s5-title": "Finishing up",
+    "s5-description": "Double-check everything looks OK before confirming.",
+    "Incident_Date": "Incident happend Date :",
+    "Incident_location": "Incident happend location:",
+    "attachments":"Attachments",
+    "Attach File": "Attach File",
+
+    "s6-title": "Thank you",
+    "s6-description": "Thanks for confirming your Information! We are committed to investigating this matter thoroughly and taking appropriate action. Please don't hesitate to reach out if you have any further information to share. feel free to call as 905, email us at info@ethiopianelectricutility.gov.et",
+
+  
+    "To which EEU (Region, District, CSC) to inform your suggestion (optional)": "To which EEU (Region, District, CSC) to inform your suggestion (optional)",
+    "Select (Region, District, CSC)": "Select (Region, District, CSC)",
+    "To which EEU to inform your suggestion": "To which EEU to inform your suggestion",
+    "Add New Case": "Add New Case",
+    "maximum": "maximum"
+  
+  }

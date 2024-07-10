@@ -1,118 +1,125 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
+import { StyleSheet, Text, View } from 'react-native'
+import React from 'react'
+import { NavigationContainer } from '@react-navigation/native'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import WelcomeScreen from './src/screens/WelcomeScreen';
+import SignUpScreen from './src/screens/SignUpScreen';
+import TabNavigator from './src/navigators/TabNavigator';
+import LoginScreen from './src/screens/LoginScreen';
+import HomeScreen from './src/screens/HomeScreen';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import Loader from './src/components/Loader';
+import ForgetPasswordScreen from './src/screens/ForgetPasswordScreen';
+import VerificationScreen from './src/screens/VerificationScreen';
+import ResetPassword from './src/screens/ResetPassword';
+import SplashScreen from './src/components/Splash';
+import { ToastProvider } from "react-native-toast-notifications";
+import TermsAndCondition from './src/components/settingpages/TermsAndCondition';
+import PrivacyPolcy from './src/components/settingpages/PrivacyPolcy';
+import AboutUs from './src/components/settingpages/AboutUs';
 
-import React from 'react';
-import type {PropsWithChildren} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+const Stack = createNativeStackNavigator();
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+const App = () => {
+  const [initialRouteName, setInitialRouteName] = React.useState('');
 
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
+  React.useEffect(() => {
+    // setTimeout(() => {
+    //   authUser();
+    // }, 2000);
+    authUser();
+  }, []);
 
-function Section({children, title}: SectionProps): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-}
-
-function App(): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+  const authUser = async () => {
+    try {
+      let userData = await AsyncStorage.getItem('userData');
+      if (userData) {
+        userData = JSON.parse(userData);
+        if (userData?.loggedIn) {
+          setInitialRouteName('Tab');
+        } else {
+          setInitialRouteName('LoginScreen');
+        }
+      } else {
+        setInitialRouteName('WelcomeScreen');
+      }
+    } catch (error) {
+      setInitialRouteName('WelcomeScreen');
+    }
   };
-
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
-  );
+    <ToastProvider>
+    <NavigationContainer>
+      {!initialRouteName ? (
+        // <Loader visible={true}/>
+        <SplashScreen/>
+      ) : (
+        <>
+      <Stack.Navigator 
+      initialRouteName={initialRouteName}
+      screenOptions={{headerShown: false}}>
+      <Stack.Screen
+          name="Tab"
+          component={TabNavigator}
+          options={{animation: 'slide_from_bottom'}}>
+      </Stack.Screen>
+        <Stack.Screen
+            name="WelcomeScreen"
+            component={WelcomeScreen}
+            options={{animation: 'slide_from_bottom'}}>
+        </Stack.Screen>
+        <Stack.Screen
+            name="SignUpScreen"
+            component={SignUpScreen}
+            options={{animation: 'slide_from_bottom'}}>
+        </Stack.Screen>
+        <Stack.Screen
+            name="LoginScreen"
+            component={LoginScreen}
+            options={{animation: 'slide_from_bottom'}}>
+        </Stack.Screen>
+        <Stack.Screen
+            name="ForgetPasswordScreen"
+            component={ForgetPasswordScreen}
+            options={{animation: 'slide_from_bottom'}}>
+        </Stack.Screen>
+        <Stack.Screen
+            name="VerificationScreen"
+            component={VerificationScreen}
+            options={{animation: 'slide_from_bottom'}}>
+        </Stack.Screen>
+        <Stack.Screen
+            name="ResetPassword"
+            component={ResetPassword}
+            options={{animation: 'slide_from_bottom'}}>
+        </Stack.Screen>
+        <Stack.Screen
+            name="TermsAndCondition"
+            component={TermsAndCondition}
+            options={{animation: 'slide_from_bottom'}}>
+        </Stack.Screen>
+        <Stack.Screen
+            name="PrivacyPolcy"
+            component={PrivacyPolcy}
+            options={{animation: 'slide_from_bottom'}}>
+        </Stack.Screen>
+        <Stack.Screen
+            name="AboutUs"
+            component={AboutUs}
+            options={{animation: 'slide_from_bottom'}}>
+        </Stack.Screen>
+        
+        
+
+        <Stack.Screen name="HomeScreen" component={HomeScreen} />
+      </Stack.Navigator>
+      </>
+      )}
+    </NavigationContainer>
+    </ToastProvider>
+  )
 }
 
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
+export default App
 
-export default App;
+const styles = StyleSheet.create({})
